@@ -4,7 +4,7 @@
 setwd("G:/Data")
 
 
-#reading phytoplankton species abundance data: File_S1.tsv - tab-delimited text file
+#reading phytoplankton species abundance data: phyto_species_abundance_class_names.tsv - tab-delimited text file
 
 data<-read.table("phyto_species_abundance_class_names.tsv",header=TRUE,sep="\t")
 rownames(data)<-data[,1]
@@ -13,7 +13,7 @@ data<-data[,-c(1, ncol(data))]
 Abundance<-data #Abundance - data frame with the phytoplankton species abundance
 
 
-#reading phytoplankton species biomass data: File_S2.tsv - tab-delimited text file
+#reading phytoplankton species biomass data: phyto_species_biomass_class_names.tsv - tab-delimited text file
 
 data<-read.table("phyto_species_biomass_class_names.tsv",header=TRUE,sep="\t")
 rownames(data)<-data[,1]
@@ -22,7 +22,7 @@ data<-data[,-c(1, ncol(data))]
 Biomass<-data #Biomass - data frame with the phytoplankton species biomass
 
 
-#reading phytoplankton ASV read counts data: File_S3.tsv - tab-delimited text file
+#reading phytoplankton ASV read counts data: ASV_phyto_class_names.tsv - tab-delimited text file
 
 data<-read.table("ASV_phyto_class_names.tsv",header=TRUE, sep="\t")
 rownames(data)<-data[,1]
