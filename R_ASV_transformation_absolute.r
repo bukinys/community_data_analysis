@@ -44,7 +44,7 @@ ASV<-data #ASV - data frame with the relative abundance of phytoplankton ASV
 ASV_Abundance<-ASV
 
 
-#Суммирование общей численности видов фитопланктона в образцах
+#Summarising the total abundance of phytoplankton species in the samples
 S<-colSums(Abundance)
 
 for(i in 1:nrow(ASV_Abundance)) ASV_Abundance[,i]<-S[i]*ASV_Abundance[,i]
@@ -64,7 +64,7 @@ write.table(cbind(id=rownames(ASV_Abundance), ASV_Abundance), "ASV_Abundance.tsv
 
 ASV_Biomass<-ASV
 
-#Суммирование общей биомассы видов фитопланктона в образцах
+#Summing the total biomass of phytoplankton species in the samples
 S<-colSums(Biomass)
 
 for(i in 1:nrow(ASV_Biomass)) ASV_Biomass[,i]<-S[i]*ASV_Biomass[,i]
